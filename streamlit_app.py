@@ -36,8 +36,8 @@ st.audio(audio_bytes, format="audio/wav")
 
 #---setup event explorer---#
 #read in data
-win_prob = pd.read_csv('win_prob.csv')
-full_data = pd.read_csv('full_data.csv')
+win_prob = pd.read_csv('data/win_prob.csv')
+full_data = pd.read_csv('data/full_data.csv')
 
 #find all unique games from dropdown
 #losing sort order when going from set to list...need to be a little hacky here

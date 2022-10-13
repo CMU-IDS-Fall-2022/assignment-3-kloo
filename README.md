@@ -3,25 +3,28 @@
 * **Team members**: ipk@andrew.cmu.edu 
 * **Online URL**: https://cmu-ids-fall-2022-assignment-3-kloo-streamlit-app-vphgy2.streamlitapp.com/
 
-## Instructions
+## Project Overview
 
-### Run Locally
+This repository contains a streamlit app and the supporting files, including a data generating script.  This project gives users a unique way to explore Penguins NHL game data, allowing simultaneous exploration across time, space, and context.  For a full description of the project, see writeup.md.
 
-Check out the Streamlit [getting started](https://docs.streamlit.io/en/stable/getting_started.html) guide and setup your Python environment.
+## File Descriptions
 
-To run the application locally, install the dependencies with `pip install -r requirements.txt` (or another preferred method to install the dependencies listed in `requirements.txt`). Then run `streamlit run streamlit_app.py`.
+- data
+        - full_data.csv = stacked dataframe containing events from NHL games
+        - win_prob.csv = dataframe containing a row for every minute for all penguins games between 2016 and 2022.  Each minute has the penguins' win probability.
+- www
+        - nite.wav = an audio sample from famed penguins radio announcer Mike Lang
+        - pens_log.png = the penguins (best version of their) logo
+        - screenshot.png = a screenshot of the app used in the write up (writeup.md)
+- LICENSE = license information
+- prepare_data.py = script for generating all data used in this app.  Source is the NHL's undocumented API.
+- README.md = generates this document.
+- requirements.txt = all packages needed to run the app
+- streamlit_app.py = streamlit app
+- writeup.md = a description of the project
 
-### Deploy to Streamlit Sharing
+## Deliverables
 
-Before you can view your application online, you need to have it set up with Streamlit Cloud. 
-Sign up for a [free Starter Streamlit Cloud account](https://streamlit.io/cloud). 
-
-Then, go to [share.streamlit.io](https://share.streamlit.io) to deploy your Streamlit app by creating a new app and pointing it to your github repo.
-
-Once the repo is set up, please update the URL as the top of this readme and add the URL as the website for this GitHub repository.
-
-### Deliverables
-
-- [ ] An interactive data science or machine learning application using Streamlit.
-- [ ] The URL at the top of this readme needs to point to your Streamlit application online. The application should also list the names of the team members. 
-- [ ] A write-up that describes the goals of your application, justifies design decisions, and gives an overview of your development process. Use the `writeup.md` file in this repository. You may add more sections to the document than the template has right now.
+- [x] An interactive data science or machine learning application using Streamlit.
+- [x] The URL at the top of this readme needs to point to your Streamlit application online. The application should also list the names of the team members. 
+- [x] A write-up that describes the goals of your application, justifies design decisions, and gives an overview of your development process. Use the `writeup.md` file in this repository. You may add more sections to the document than the template has right now.
