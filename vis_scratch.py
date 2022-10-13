@@ -199,3 +199,28 @@ timeseries = base.mark_line().encode(
 points | timeseries
 
 alt.vconcat(points, timeseries)
+
+
+
+full_data = pd.read_csv('full_data.csv')
+
+hit_leaders = full_data[(full_data['type'] == 'hits') & (full_data['game'] == 2021030147)].groupby('hitter', as_index = False).size().sort_values('size', ascending = False).reset_index(drop = True)
+
+shot_leaders = full_data[(full_data['type'] == 'shots') & (full_data['game'] == 2021030147)].groupby('shooter', as_index = False).size().sort_values('size', ascending = False).reset_index(drop = True)
+
+goal_leaders = full_data[(full_data['type'] == 'goals') & (full_data['game'] == 2021030147)].groupby('scorer', as_index = False).size().sort_values('size', ascending = False).reset_index(drop = True)
+
+assist_1 = full_data[(full_data['type'] == 'goals') & (full_data['game'] == 2021030147)].groupby('assist_1', as_index = False).size().sort_values('size', ascending = False).reset_index(drop = True)
+assist_1.columns = ['name', 'size']
+
+assist_2 = full_data[(full_data['type'] == 'goals') & (full_data['game'] == 2021030147)].groupby('assist_2', as_index = False).size().sort_values('size', ascending = False).reset_index(drop = True)
+assist_2.columns = ['name', 'size']
+
+assist_leaders = pd.concat([assist_1, assist_2]).groupby('name', as_index = False).sum('size')
+assist_leaders.columns
+
+alt.Chart(assist_leaders).mark_bar().encode(
+    y = alt.X('name', sort = '-x'),
+    x = alt.Y('size')
+)
+
