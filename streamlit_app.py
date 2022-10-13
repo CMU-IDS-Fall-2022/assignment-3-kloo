@@ -35,15 +35,14 @@ audio_bytes = audio_file.read()
 st.audio(audio_bytes, format="audio/wav")
 
 #@st.cache  # add caching so we load the data only once
-def load_data():
-    return pd.read_csv('pens_hits.csv')
+# def load_data():
+#     return pd.read_csv('pens_hits.csv')
 
-hits = load_data()
-goals = pd.read_csv('pens_goals.csv')
-shots = pd.read_csv('pens_shots.csv')
+# hits = load_data()
+# goals = pd.read_csv('pens_goals.csv')
+# shots = pd.read_csv('pens_shots.csv')
 
 win_prob = pd.read_csv('win_prob.csv')
-
 full_data = pd.read_csv('full_data.csv')
 
 #losing sort order...
