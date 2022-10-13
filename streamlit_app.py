@@ -25,12 +25,12 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.write(' ')
 with col2:
-    st.image("pens_logo.png")
+    st.image("www/pens_logo.png")
 with col3:
     st.write(' ')
 
 #add the audio file from the famous Mike Lang!
-audio_file = open('nite.wav', 'rb')
+audio_file = open('www/nite.wav', 'rb')
 audio_bytes = audio_file.read()
 st.audio(audio_bytes, format="audio/wav")
 

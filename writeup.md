@@ -1,6 +1,6 @@
 # Project name
 
-![A screenshot of your application. Could be a GIF.](screenshot.png)
+![](www/screenshot.png)
 
 TODO: Update screenshot
 
